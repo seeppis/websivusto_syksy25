@@ -3,7 +3,7 @@ p {
     }
     
     body {
-      background-color: lightgray;
+      background-color: rgb(240, 247, 246);
     }
     
     h1 {
@@ -19,13 +19,13 @@ p {
     }
     
     th, td {
-      border: 1px solid #ddd;
+      border: 1px solid #ff0000;
       padding: 8px;
       text-align: left;
     }
     
     th {
-      background-color: #f2f2f2;
+      background-color: #bee7a6;
     }
     
     form {
@@ -40,13 +40,13 @@ p {
     
     input[type="text"], input[type="email"] {
       padding: 8px;
-      border: 1px solid #ddd;
+      border: 1px solid #ed93f5;
       border-radius: 4px;
     }
     
     input[type="submit"] {
-      background-color: #4CAF50;
-      color: white;
+      background-color: #44ad47;
+      color: rgb(0, 0, 0);
       padding: 10px;
       border: none;
       border-radius: 4px;
