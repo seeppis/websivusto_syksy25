@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Löylymökki | Tarjouspyyntö</title>
+  <link rel="stylesheet" href="styles/style.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+/>
+</head>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const palvelu = params.get("palvelu");
+
+  if (palvelu) {
+    const select = document.getElementById("palvelu-select");
+    for (let option of select.options) {
+      if (option.value === palvelu || option.text === palvelu) {
+        option.selected = true;
+      }
+    }
+  }
+</script>
+
+<body class="tarjouspyynto-page">
+
+<header>
+  <nav>
+    <div class="logo">Löylymökki</div>
+    <ul>
+      <li><a href="index.html">Etusivu</a></li>
+      <li><a href="palvelut.html">Palvelut</a></li>
+      <li><a href="meista.html">Meistä</a></li>
+      <li><a href="tarjouspyynto.html">Tarjouspyyntö</a></li>
+      <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+      
+    </ul>
+  </nav>
+</header>
+<div class="page-wrapper">
+<main>
+<section class="form-section">
+  <h2>Tarjouspyyntö</h2>
+  <p class="form-intro">
+    Täytä lomake ja palaamme sinulle mahdollisimman pian.
+  </p>
+
+  <form class="tarjous-form">
+    <label>
+      Nimi
+      <input type="text" required>
+    </label>
+
+    <label>
+      Sähköposti
+      <input type="email" required>
+    </label>
+
+    <label>
+      Puhelinnumero
+      <input type="tel">
+    </label>
+
+    <label>
+      Valitse palvelu
+       <select id="palvelu-select">
+        <option>Savusauna</option>
+        <option>Perinteinen sauna</option>
+        <option>Erikoistilaisuudet</option>
+      </select>
+    </label>
+
+    <label>
+      Toivottu päivämäärä
+      <input type="date">
+    </label>
+
+    <label>
+      Lisätiedot
+      <textarea rows="4" placeholder="Kerro hieman tarpeistasi..."></textarea>
+    </label>
+
+    <button type="submit">Lähetä tarjouspyyntö</button>
+  </form>
+</section>
+</main>
+<footer>
+  <div class="footer-socials">
+  <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+  <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+</div>
+    <p>© 2025 Löylymökki. Kaikki oikeudet pidätetään.</p>
+</footer>
+
+</body>
+</html>
