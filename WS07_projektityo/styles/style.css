@@ -420,5 +420,8 @@ body.palvelut-page {
 .palvelut-layout {
   height: calc(100vh - 80px);
 }
+.fa-rotate-by {
+  --fa-rotate-angle: 0deg;
+}
 
 
